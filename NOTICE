@@ -1,0 +1,7 @@
+This project is unofficial and not affiliated with, endorsed by, or supported
+by TPP (The Phoenix Partnership) or SystmOne.
+
+Bundled terminology in `systmanyone/data/ctv3.csv.gz` is NHS Clinical Terms
+Version 3 (CTV3): Crown copyright, NHS England. It contains public sector
+information licensed under the Open Government Licence v3.0 and is not covered
+by the MIT licence above; see `systmanyone/data/README.md`.

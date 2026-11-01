@@ -87,7 +87,7 @@ systmanyone/
 
 ## Licence
 Code: MIT (see `LICENSE`). Bundled CTV3 terminology: Crown copyright, Open
-Government Licence v3.0 (see `systmanyone/data/README.md`).
+Government Licence v3.0 (see `NOTICE` and `systmanyone/data/README.md`).
 
 SystmOne is a trademark of TPP. SystmAnyone is an independent project, not
 affiliated with or endorsed by TPP; the name refers to SystmOne only to
