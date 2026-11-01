@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fb">
+  <title>SystmAnyone · unofficial template builder</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8h8M8 12h5M8 16h3"/><path d="M16 14v4M14 16h4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-new" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v5M9.5 14.5h5"/></symbol>
+    <symbol id="i-open" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-sample" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 5.5v14M8 7h8M8 11h6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 7 4 12l5 5M4 12h9a6 6 0 0 1 6 6"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="m15 7 5 5-5 5M20 12h-9a6 6 0 0 0-6 6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-components" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-page" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6"/></symbol>
+    <symbol id="i-heading" viewBox="0 0 24 24"><path d="M5 4v16M19 4v16M5 12h14"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 5h16M4 10h16M4 15h10M4 20h8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m7 12 3 3 7-7"/></symbol>
+    <symbol id="i-select" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m8 10 4 4 4-4"/></symbol>
+    <symbol id="i-radio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></symbol>
+    <symbol id="i-calculator" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8v4H8zM8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.1 1.1M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.1-1.1"/></symbol>
+    <symbol id="i-signature" viewBox="0 0 24 24"><path d="M3 17c4-8 5-12 7-12 3 0-3 13 0 13 2 0 3-5 4-5 1 0-1 5 1 5 1.5 0 3-2 6-2M3 21h18"/></symbol>
+    <symbol id="i-button" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="3"/><path d="M8 12h8"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2c-1 .7-1.5 1.2-1.5 2.5M12 17h.01"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20zM12 9v5M12 18h.01"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></symbol>
+  </svg>
+
+  <header class="app-header">
+    <button class="icon-button mobile-only" id="toggle-components" aria-label="Open components panel" aria-controls="components-panel" aria-expanded="false" title="Components"><svg><use href="#i-components"/></svg></button>
+    <button class="brand" id="brand-button" aria-label="Template settings">
+      <span class="brand-mark"><svg><use href="#i-logo"/></svg></span>
+      <span class="brand-copy"><strong>SystmAnyone</strong><small>Unofficial template builder</small></span>
+    </button>
+    <div class="header-divider"></div>
+    <button class="document-identity" id="document-settings" title="Edit template settings">
+      <span id="header-document-name">New Template</span>
+      <span class="save-status" id="save-status"><span class="status-dot"></span>Saved locally</span>
+    </button>
+    <div class="header-actions">
+      <button class="button subtle optional-action" id="new-button" aria-label="Create new template" title="New template"><svg><use href="#i-new"/></svg><span>New</span></button>
+      <button class="button subtle optional-action" id="open-button" aria-label="Open XML template" title="Open XML template"><svg><use href="#i-open"/></svg><span>Open</span></button>
+      <button class="button subtle optional-action" id="sample-button" aria-label="Load SMR sample" title="Load SMR sample"><svg><use href="#i-sample"/></svg><span>SMR sample</span></button>
+      <span class="header-divider compact"></span>
+      <button class="icon-button" id="undo-button" aria-label="Undo" title="Undo (Ctrl+Z)" disabled><svg><use href="#i-undo"/></svg></button>
+      <button class="icon-button" id="redo-button" aria-label="Redo" title="Redo (Ctrl+Shift+Z)" disabled><svg><use href="#i-redo"/></svg></button>
+      <button class="button subtle" id="xml-button" aria-label="Preview XML" title="Preview XML"><svg><use href="#i-code"/></svg><span>XML</span></button>
+      <button class="button primary" id="export-button" aria-label="Export XML template" title="Export XML template"><svg><use href="#i-download"/></svg><span>Export .xml</span></button>
+      <button class="icon-button mobile-only" id="toggle-inspector" aria-label="Open inspector panel" aria-controls="inspector-panel" aria-expanded="false" title="Inspector"><svg><use href="#i-settings"/></svg></button>
+    </div>
+  </header>
+
+  <main class="editor-shell">
+    <aside class="side-panel components-panel" id="components-panel" aria-label="Components and layers">
+      <div class="panel-tabs" role="tablist" aria-label="Left panel">
+        <button class="panel-tab active" id="components-tab" role="tab" aria-selected="true"><svg><use href="#i-components"/></svg>Components</button>
+        <button class="panel-tab" id="layers-tab" role="tab" aria-selected="false" tabindex="-1"><svg><use href="#i-layers"/></svg>Layers <span class="count-badge" id="layer-count">0</span></button>
+      </div>
+      <div id="components-view">
+        <div class="panel-search">
+          <svg><use href="#i-search"/></svg>
+          <input id="component-search" type="search" placeholder="Find a component…" aria-label="Find a component">
+          <kbd>/</kbd>
+        </div>
+        <div class="panel-scroll" id="component-palette"></div>
+        <div class="panel-footnote">Click to add, or drag onto the canvas</div>
+      </div>
+      <div class="panel-scroll hidden" id="layers-view"></div>
+    </aside>
+
+    <section class="editor-center" aria-label="Template canvas">
+      <div class="page-bar">
+        <div class="page-tabs" id="page-tabs" role="tablist" aria-label="Template pages"></div>
+        <button class="icon-button add-page-button" id="add-page-button" aria-label="Add page" title="Add page"><svg><use href="#i-plus"/></svg></button>
+      </div>
+      <div class="canvas-toolbar">
+        <div class="segmented-control" aria-label="Canvas mode">
+          <button id="design-mode" class="active" aria-pressed="true">Design</button>
+          <button id="outline-mode" aria-pressed="false">Outline</button>
+        </div>
+        <button class="icon-button" id="grid-button" aria-label="Toggle grid" aria-pressed="false" title="Show layout grid"><svg><use href="#i-grid"/></svg></button>
+        <span class="toolbar-spacer"></span>
+        <span class="canvas-size" id="canvas-size">396 × 636</span>
+        <div class="zoom-controls">
+          <button class="icon-button" id="zoom-out" aria-label="Zoom out" title="Zoom out"><svg><use href="#i-minus"/></svg></button>
+          <button class="zoom-value" id="zoom-value" title="Reset to 100%">100%</button>
+          <button class="icon-button" id="zoom-in" aria-label="Zoom in" title="Zoom in"><svg><use href="#i-plus"/></svg></button>
+          <button class="icon-button" id="zoom-fit" aria-label="Fit canvas to window" title="Fit to window"><svg><use href="#i-fit"/></svg></button>
+        </div>
+      </div>
+      <div class="canvas-viewport" id="canvas-viewport">
+        <div class="canvas-scaler" id="canvas-scaler">
+          <div class="canvas-page" id="canvas-page" aria-label="Template editing canvas"></div>
+        </div>
+      </div>
+      <footer class="canvas-footer">
+        <span id="selection-status">No component selected</span>
+        <span class="footer-spacer"></span>
+        <span class="snap-label">4 px snap</span>
+        <button class="text-button" id="shortcuts-button"><svg><use href="#i-help"/></svg>Shortcuts</button>
+      </footer>
+    </section>
+
+    <aside class="side-panel inspector-panel" id="inspector-panel" aria-label="Properties inspector">
+      <div class="panel-tabs" role="tablist" aria-label="Inspector">
+        <button class="panel-tab active" id="selection-tab" role="tab" aria-selected="true"><svg><use href="#i-settings"/></svg>Inspector</button>
+        <button class="panel-tab" id="template-tab" role="tab" aria-selected="false" tabindex="-1"><svg><use href="#i-page"/></svg>Template</button>
+      </div>
+      <div class="panel-scroll inspector-content" id="inspector-content"></div>
+    </aside>
+  </main>
+
+  <div class="panel-backdrop" id="panel-backdrop"></div>
+  <input id="file-input" type="file" accept=".xml,.txt" hidden>
+
+  <dialog class="modal xml-modal" id="xml-dialog">
+    <div class="modal-header">
+      <div><span class="eyebrow">OUTPUT</span><h2>XML preview</h2></div>
+      <span class="metadata-badge" id="xml-size">Generating…</span>
+      <button class="icon-button" id="copy-xml-button" aria-label="Copy XML" title="Copy XML"><svg><use href="#i-copy"/></svg></button>
+      <button class="icon-button" data-close-dialog="xml-dialog" aria-label="Close XML preview"><svg><use href="#i-close"/></svg></button>
+    </div>
+    <pre class="xml-preview" id="xml-preview" tabindex="0"></pre>
+    <div class="modal-footer"><span>The CRC header is included in the downloaded file.</span><button class="button primary" id="xml-export-button"><svg><use href="#i-download"/></svg>Export .xml</button></div>
+  </dialog>
+
+  <dialog class="modal shortcuts-modal" id="shortcuts-dialog">
+    <div class="modal-header"><div><span class="eyebrow">WORK FASTER</span><h2>Keyboard shortcuts</h2></div><button class="icon-button" data-close-dialog="shortcuts-dialog" aria-label="Close shortcuts"><svg><use href="#i-close"/></svg></button></div>
+    <div class="shortcut-list">
+      <div><span>Undo</span><span><kbd>Ctrl</kbd><kbd>Z</kbd></span></div>
+      <div><span>Redo</span><span><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd></span></div>
+      <div><span>Duplicate component</span><span><kbd>Ctrl</kbd><kbd>D</kbd></span></div>
+      <div><span>Copy / paste component</span><span><kbd>Ctrl</kbd><kbd>C</kbd> / <kbd>Ctrl</kbd><kbd>V</kbd></span></div>
+      <div><span>Move component</span><span><kbd>Arrow keys</kbd></span></div>
+      <div><span>Move by 10 px</span><span><kbd>Shift</kbd><kbd>Arrow keys</kbd></span></div>
+      <div><span>Delete component</span><span><kbd>Delete</kbd></span></div>
+      <div><span>Find a component</span><span><kbd>/</kbd></span></div>
+      <div><span>Export XML</span><span><kbd>Ctrl</kbd><kbd>S</kbd></span></div>
+    </div>
+  </dialog>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

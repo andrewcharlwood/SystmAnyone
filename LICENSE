@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 andrewcharlwood
+Copyright (c) 2026 Andrew Charlwood
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+This project is unofficial and not affiliated with, endorsed by, or supported
+by TPP (The Phoenix Partnership) or SystmOne.
+
+Bundled terminology in `systmanyone/data/ctv3.csv.gz` is NHS Clinical Terms
+Version 3 (CTV3): Crown copyright, NHS England. It contains public sector
+information licensed under the Open Government Licence v3.0 and is not covered
+by the MIT licence above; see `systmanyone/data/README.md`.
